@@ -6,12 +6,16 @@
 /*   By: yegpark <yegpark@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 17:10:29 by yegpark           #+#    #+#             */
-/*   Updated: 2023/06/22 17:35:08 by yegpark          ###   ########.fr       */
+/*   Updated: 2023/06/22 17:50:17 by yegpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HEADER_H
 #define HEADER_H
+
+#include <stdarg.h>
+
+
 
 
 #endif
