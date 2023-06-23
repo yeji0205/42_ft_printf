@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   header.h                                           :+:      :+:    :+:   */
+/*   ft_write_word.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yegpark <yegpark@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/22 17:10:29 by yegpark           #+#    #+#             */
-/*   Updated: 2023/06/23 15:28:02 by yegpark          ###   ########.fr       */
+/*   Created: 2023/06/23 14:38:37 by yegpark           #+#    #+#             */
+/*   Updated: 2023/06/23 15:42:01 by yegpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_H
-#define HEADER_H
+#include "header.h"
 
-#include <unistd.h>
-#include <stdarg.h>
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
-int	ft_printf(const char *format, ...);
-void	ft_putchar(char c);
-void	ft_putstr(char *s);
-void	ft_putnbr(int n);
+void	ft_putstr(char *s)
+{
+	int	i;
 
+	i = 0;
+	while (s[i])
+	{
+		ft_putchar(s[i]);
+		i++;
+	}
+}
 
-#endif
+void	ft_newline() 
+{
+	write(1, "\n", 1);
+}

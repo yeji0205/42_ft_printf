@@ -1,11 +1,10 @@
-SRCS = ft_putchar_fd.c ft_putstr_fd.c ft_putnbr_fd.c ft_putendl_fd.c \
+SRCS = ft_printf.c ft_write_num.c ft_write_word.c \
 
 #B_SRCS = 
 
 NAME = libftprintf.a
 
 OBJS = ${SRCS:.c=.o}
-B_OBJS = ${B_SRCS:.c=.o}
 
 CFLAGS = -Wall -Wextra -Werror
 CC = cc
@@ -20,12 +19,16 @@ all:	${NAME}
 
 clean:
 	rm -f ${OBJS}
+	rm test
 #	rm -f ${B_OBJS}
 
 fclean: clean
 	rm -f ${NAME} 
 
 re: fclean all
+
+test:
+	${CC} -o test ${SRCS} ${CFLAGS}
 
 
 .PHONY: all clean fclean re
