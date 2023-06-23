@@ -6,7 +6,7 @@
 /*   By: yegpark <yegpark@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 17:09:27 by yegpark           #+#    #+#             */
-/*   Updated: 2023/06/23 15:55:45 by yegpark          ###   ########.fr       */
+/*   Updated: 2023/06/23 16:40:41 by yegpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,21 @@
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
-	unsigned int	i;
+	int	i;
+	int	count;
 
 	va_start(args, format);
 
 	i = 0;
+	count = 0;
 	while(format[i])
 	{
+		count++;
 		if (format[i] == '%')
 		{
 			i++;
 			if (format[i] == 's')
-				ft_putstr(va_arg(args, char *));
+				count += ft_putstr(va_arg(args, char *));
 			else if (format[i] == 'd')
 				ft_putnbr(va_arg(args, int));
 			else if (format[i] == '\n')
@@ -39,7 +42,7 @@ int	ft_printf(const char *format, ...)
 		i++;
 	}
 
-	return (i);
+	return (count);
 }
 
 
@@ -55,7 +58,6 @@ int main()
 
 	printf("number of element %d\n", from_original);	
 	printf("number of element %d\n", from_ft_printf);
-
 	
 
 }

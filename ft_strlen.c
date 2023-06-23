@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   header.h                                           :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yegpark <yegpark@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/22 17:10:29 by yegpark           #+#    #+#             */
-/*   Updated: 2023/06/23 16:40:31 by yegpark          ###   ########.fr       */
+/*   Created: 2023/06/23 16:06:24 by yegpark           #+#    #+#             */
+/*   Updated: 2023/06/23 16:24:33 by yegpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_H
-#define HEADER_H
+#include "header.h"
 
-#include <unistd.h>
-#include <stdarg.h>
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
 
-int	ft_printf(const char *format, ...);
-void	ft_putchar(char c);
-int	ft_putstr(char *s);
-void	ft_putnbr(int n);
-size_t	ft_strlen(const char *s);
-
-#endif
+	i = 0;
+	while (s[i])
+	{
+		i++;
+	}
+	return (i);
+}
