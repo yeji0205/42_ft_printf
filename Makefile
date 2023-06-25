@@ -1,6 +1,6 @@
-SRCS = ft_printf.c ft_write_num.c ft_write_word.c \
+SRCS = ft_printf.c ft_num_base.c ft_num_int.c ft_strlen.c ft_word.c \
 
-#B_SRCS = 
+#B_SRCS =
 
 NAME = libftprintf.a
 
@@ -23,7 +23,7 @@ clean:
 #	rm -f ${B_OBJS}
 
 fclean: clean
-	rm -f ${NAME} 
+	rm -f ${NAME}
 
 re: fclean all
 

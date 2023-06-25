@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   header.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yegpark <yegpark@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: yegipark <yegipark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 17:10:29 by yegpark           #+#    #+#             */
-/*   Updated: 2023/06/23 16:40:31 by yegpark          ###   ########.fr       */
+/*   Updated: 2023/06/25 03:53:41 by yegipark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@
 int	ft_printf(const char *format, ...);
 void	ft_putchar(char c);
 int	ft_putstr(char *s);
-void	ft_putnbr(int n);
-size_t	ft_strlen(const char *s);
+int	ft_num_int(int n);
+int	ft_strlen(char *s);
+int	ft_num_base(unsigned int nbr, char *base);
+int	ft_num_pointer(unsigned long nbr, char *base);
+
 
 #endif
