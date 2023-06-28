@@ -6,7 +6,7 @@
 /*   By: yegipark <yegipark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/24 22:39:57 by yegipark          #+#    #+#             */
-/*   Updated: 2023/06/29 01:04:26 by yegipark         ###   ########.fr       */
+/*   Updated: 2023/06/29 01:09:00 by yegipark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,16 +91,3 @@ int	ft_num_pointer(unsigned long nbr, char *base)
 	count++;
 	return (count);
 }
-
-
-// void	ft_putnbr_base(unsigned int nbr, char *base)
-// {
-// 	int	base_len;
-
-// 	base_len = ft_strlen(base);
-// 	if (ft_is_valid(base) == 1)
-// 	{
-// 		return ;
-// 	}
-// 	ft_putnbr_helper(nbr, base, base_len);
-// }
