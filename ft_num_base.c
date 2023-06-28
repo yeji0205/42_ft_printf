@@ -6,7 +6,7 @@
 /*   By: yegipark <yegipark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/24 22:39:57 by yegipark          #+#    #+#             */
-/*   Updated: 2023/06/25 03:56:57 by yegipark         ###   ########.fr       */
+/*   Updated: 2023/06/29 01:04:26 by yegipark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,24 +38,42 @@
 // 	return (0);
 // }
 
+int	ft_num_base_int(int nbr, char *base)
+{
+	int	base_len;
+	int	count;
+
+	base_len = ft_strlen(base);
+	count = 0;
+	if (nbr == -2147483648)
+	{
+		count += ft_putchar('-');
+		count += ft_putchar('2');
+		nbr = 147483648;
+	}
+	else if (nbr < 0)
+	{
+		ft_putchar('-');
+		nbr = -nbr;
+		count++;
+	}
+	if (nbr >= base_len)
+		count += ft_num_base_int((nbr / base_len), base);
+	ft_putchar(base[nbr % base_len]);
+	count++;
+	return (count);
+}
+
 int	ft_num_base(unsigned int nbr, char *base)
 {
-	// long	long_nbr;
 	unsigned int	base_len;
 	int	count;
 
-	// long_nbr = nbr;
 	base_len = ft_strlen(base);
 	count = 0;
 	if (nbr >= base_len)
-	{
-		ft_num_base((nbr / base_len), base);
-		ft_num_base((nbr % base_len), base);
-	}
-	else
-	{
-		ft_putchar(base[nbr]);
-	}
+		count += ft_num_base_int((nbr / base_len), base);
+	ft_putchar(base[nbr % base_len]);
 	count++;
 	return (count);
 }
@@ -68,14 +86,8 @@ int	ft_num_pointer(unsigned long nbr, char *base)
 	base_len = ft_strlen(base);
 	count = 0;
 	if (nbr >= base_len)
-	{
-		ft_num_pointer((nbr / base_len), base);
-		ft_num_pointer((nbr % base_len), base);
-	}
-	else
-	{
-		ft_putchar(base[nbr]);
-	}
+		count += ft_num_pointer((nbr / base_len), base);
+	ft_putchar(base[nbr % base_len]);
 	count++;
 	return (count);
 }
