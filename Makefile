@@ -1,4 +1,4 @@
-SRCS = ft_printf.c ft_num_base.c ft_num_int.c ft_strlen.c ft_word.c \
+SRCS = ft_printf.c ft_num_base.c ft_strlen.c ft_word.c \
 
 #B_SRCS =
 
