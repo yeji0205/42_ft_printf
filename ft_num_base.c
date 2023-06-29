@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_num_base.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yegipark <yegipark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yegpark <yegpark@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/24 22:39:57 by yegipark          #+#    #+#             */
-/*   Updated: 2023/06/29 01:09:00 by yegipark         ###   ########.fr       */
+/*   Updated: 2023/06/29 14:29:37 by yegpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "ft_printf.h"
 
 // static int	ft_is_valid(char *base)
 // {
@@ -67,7 +67,7 @@ int	ft_num_base_int(int nbr, char *base)
 int	ft_num_base(unsigned int nbr, char *base)
 {
 	unsigned int	base_len;
-	int	count;
+	int				count;
 
 	base_len = ft_strlen(base);
 	count = 0;
@@ -81,7 +81,7 @@ int	ft_num_base(unsigned int nbr, char *base)
 int	ft_num_pointer(unsigned long nbr, char *base)
 {
 	unsigned long	base_len;
-	int	count;
+	int				count;
 
 	base_len = ft_strlen(base);
 	count = 0;

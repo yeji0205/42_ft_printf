@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yegipark <yegipark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yegpark <yegpark@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 16:06:24 by yegpark           #+#    #+#             */
-/*   Updated: 2023/06/24 23:51:02 by yegipark         ###   ########.fr       */
+/*   Updated: 2023/06/29 12:38:21 by yegpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "ft_printf.h"
 
 int	ft_strlen(char *s)
 {

@@ -19,7 +19,7 @@ all:	${NAME}
 
 clean:
 	rm -f ${OBJS}
-	rm test
+#	rm test
 #	rm -f ${B_OBJS}
 
 fclean: clean
@@ -27,8 +27,8 @@ fclean: clean
 
 re: fclean all
 
-test:
-	${CC} -o test ${SRCS} ${CFLAGS}
-
+#test:
+#	${CC} -c ${SRCS} ${CFLAGS}
+#	${CC} -o test ${OBJS}
 
 .PHONY: all clean fclean re
