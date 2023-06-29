@@ -89,3 +89,30 @@ int	ft_printf(const char *format, ...)
 	}
 	return (count);
 }
+
+
+#include <stdio.h>
+
+int main()
+{
+	char *s = "test";
+	char c = 'A';
+	int num = 30;
+	unsigned int un_num= 4294967295;
+	int *p_num = &num;
+
+	int from_original = printf("compare: %s, %c, %p, %d, %u, %x, %X, %% \n", s, c, p_num, num, un_num, num, num);
+	int from_ft_printf = ft_printf("compare: %s, %c, %p, %d, %u, %x, %X, %% \n", s, c, p_num, num, un_num, num, num);
+
+	printf("number of element %d\n", from_original);
+	printf("number of element %d\n", from_ft_printf);
+
+
+	printf(", number of element_ft %d\n", ft_printf("%s", "hello"));
+	printf(", number of element_org %d\n", printf("%s", "hello"));
+	printf(", number of element %d\n", ft_printf("%d", -2147483648));
+	printf(", number of element %d\n", printf("%ld", -2147483648));
+	printf(", number of element %d\n", ft_printf("%p", 0));
+
+}
+
