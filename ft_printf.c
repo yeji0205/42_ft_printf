@@ -104,15 +104,15 @@ int main()
 	int from_original = printf("compare: %s, %c, %p, %d, %u, %x, %X, %% \n", s, c, p_num, num, un_num, num, num);
 	int from_ft_printf = ft_printf("compare: %s, %c, %p, %d, %u, %x, %X, %% \n", s, c, p_num, num, un_num, num, num);
 
-	printf("number of element %d\n", from_original);
-	printf("number of element %d\n", from_ft_printf);
+	printf("length:  %d\n", from_original);
+	printf("length: %d\n", from_ft_printf);
 
 
-	printf(", number of element_ft %d\n", ft_printf("%s", "hello"));
-	printf(", number of element_org %d\n", printf("%s", "hello"));
-	printf(", number of element %d\n", ft_printf("%d", -2147483648));
-	printf(", number of element %d\n", printf("%ld", -2147483648));
-	printf(", number of element %d\n", ft_printf("%p", 0));
+	printf(", length: %d\n", ft_printf("%s", "hello"));
+	printf(", length: %d\n", printf("%s", "hello"));
+	printf(", length: %d\n", ft_printf("%d", -2147483648));
+	printf(", length: %d\n", printf("%ld", -2147483648));
+	printf(", length: %d\n", ft_printf("%p", 0));
 
 }
 
