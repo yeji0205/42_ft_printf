@@ -26,6 +26,6 @@ int	ft_putchar(char c);
 int	ft_putstr(char *s);
 int	ft_num_base_int(int nbr, char *base);
 int	ft_num_base(unsigned int nbr, char *base);
-int	ft_num_pointer(unsigned long nbr, char *base);
+int	ft_num_pointer(unsigned long long nbr, char *base);
 
 #endif
