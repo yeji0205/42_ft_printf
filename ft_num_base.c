@@ -6,37 +6,11 @@
 /*   By: yegpark <yegpark@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/24 22:39:57 by yegipark          #+#    #+#             */
-/*   Updated: 2023/06/29 14:29:37 by yegpark          ###   ########.fr       */
+/*   Updated: 2023/06/29 16:04:49 by yegpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-// static int	ft_is_valid(char *base)
-// {
-// 	int	i;
-// 	int	j;
-
-// 	i = 0;
-// 	if (base[i] == '\0' || ft_strlen(base) == 1)
-// 	{
-// 		return (1);
-// 	}
-// 	while (base[i])
-// 	{
-// 		j = i + 1;
-// 		while (j < ft_strlen(base))
-// 		{
-// 			if (base[i] == base[j] || base[i] == '-' || base[i] == '+')
-// 			{
-// 				return (1);
-// 			}
-// 			j++;
-// 		}
-// 		i++;
-// 	}
-// 	return (0);
-// }
 
 int	ft_num_base_int(int nbr, char *base)
 {
@@ -59,8 +33,7 @@ int	ft_num_base_int(int nbr, char *base)
 	}
 	if (nbr >= base_len)
 		count += ft_num_base_int((nbr / base_len), base);
-	ft_putchar(base[nbr % base_len]);
-	count++;
+	count += ft_putchar(base[nbr % base_len]);
 	return (count);
 }
 
@@ -72,22 +45,20 @@ int	ft_num_base(unsigned int nbr, char *base)
 	base_len = ft_strlen(base);
 	count = 0;
 	if (nbr >= base_len)
-		count += ft_num_base_int((nbr / base_len), base);
-	ft_putchar(base[nbr % base_len]);
-	count++;
+		count += ft_num_base((nbr / base_len), base);
+	count += ft_putchar(base[nbr % base_len]);
 	return (count);
 }
 
-int	ft_num_pointer(unsigned long nbr, char *base)
+int	ft_num_pointer(unsigned long long nbr, char *base)
 {
-	unsigned long	base_len;
-	int				count;
+	unsigned long long	base_len;
+	int					count;
 
 	base_len = ft_strlen(base);
 	count = 0;
 	if (nbr >= base_len)
 		count += ft_num_pointer((nbr / base_len), base);
-	ft_putchar(base[nbr % base_len]);
-	count++;
+	count += ft_putchar(base[nbr % base_len]);
 	return (count);
 }
